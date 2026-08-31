@@ -1,0 +1,380 @@
+<html>
+<head>
+    <title>ECOM Application using CSS</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color:white;
+
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                "header header header header"
+                "menu menu menu menu"
+                "banner banner banner banner"
+                "title title title title"
+                "products products products products"
+                "offer offer offer offer"
+                "services services services services"
+                "footer footer footer footer";
+        }
+
+        .header {
+           grid-area:header;
+           display:grid;
+           grid-template-columns:20% 60% 20%;
+           background-color:pink;
+           align-items:center;
+           padding: 10px;
+        }
+
+        .logo img {
+            width: 150px;
+            height: 100px;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .search input[type="text"] {
+            width: 200px;
+            height: 30px;
+        }
+
+        nav {
+            grid-area: menu;
+            position: sticky;
+            top: 0;
+            padding: 20px;
+            background-color:lightblue;
+            z-index: 100;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+        }
+
+        nav ul li:hover {
+            color: bisque;
+            cursor: pointer;
+        }
+
+        .banner {
+
+    grid-area: banner;
+
+    width: 100%;
+
+    padding: 10px;
+
+    background-color:grey;
+
+    overflow: hidden;
+}
+
+
+.banner img {
+
+    display: block;
+
+    width: 100%;
+
+    height: 350px;
+
+    
+}
+
+.slider {
+
+    display: flex;
+
+    width: 300%;
+
+    animation: slide 12s infinite;
+}
+
+.slider img {
+
+    width: 33.3333%;
+
+    height: 350px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+
+@keyframes slide {
+
+   
+
+    0% {
+        transform: translateX(0);
+    }
+
+    28% {
+        transform: translateX(0);
+    }
+
+
+   
+
+    33% {
+        transform: translateX(-33.3333%);
+    }
+
+    61% {
+        transform: translateX(-33.3333%);
+    }
+
+
+   
+    66% {
+        transform: translateX(-66.6666%);
+    }
+
+    94% {
+        transform: translateX(-66.6666%);
+    }
+
+
+   
+
+    100% {
+        transform: translateX(0);
+    }
+}
+    </style>
+</head>
+
+<body>
+
+<body>
+<div class="container">
+  <header class="header">
+    <div class="logo"><img src="C:\Users\misba\OneDrive\Pictures\pink.JPG" alt="Company-Logo"/></div>
+    <div class="search">
+      <input type="text" placeholder="SEARCH ITEMS">
+      <input type="submit" value="SEARCH"/>
+    </div>
+    <div class="account"><b>Login</b>|<b>Register</b>|<b>Cart(0)</b></div>
+  </header>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>Fashion</li>
+            <li>make up</li>
+            <li>clothes</li>
+            <li>foot wear</li>
+            <li>watches</li>
+            <li>offer</li>
+            <li>bag</li>
+            <li>50% off</li>
+        </ul>
+    </nav>
+
+    <section class="banner">
+
+        <div class="slider">
+
+               <img src="C:\Users\misba\OneDrive\Pictures\cloths offer.JPG" alt="shopping offer">
+               <img src="C:\Users\misba\OneDrive\Pictures\bag offer.JPG" alt="shopping offer">
+               <img src="C:\Users\misba\OneDrive\Pictures\footwear.JPG" alt="shopping offer">
+               <img src="C:\Users\misba\OneDrive\Pictures\makeup offer.JPG" alt="shopping offer">
+               <img src="C:\Users\misba\OneDrive\Pictures\watch.JPG" alt="shopping offer">
+               <img src="C:\Users\misba\OneDrive\Pictures\shop offer.JPG" alt="shopping offer">
+
+        </div>
+
+    </section>
+
+</div>
+<table width="100%" cellpadding="25">
+        <tr align="center">
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\watch.JPG" width="150" height="150"><br>
+                <h3>Watch</h3>
+                <p>₹2,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\bag1.JPG" width="150" height="150"><br>
+                <h3>BAG</h3>
+                <p>₹11,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\makeup kit.JPG" width="150" height="150"><br>
+                <h3>makeup kit</h3>
+                <p>₹11,500</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\dress.WEBP" width="150" height="150"><br>
+                <h3>dress</h3>
+                <p>₹2,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+</br>
+        </tr>
+    </table>
+<br>
+  
+    <table width="100%" cellpadding="25">
+        <tr align="center">
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\heels.JPG" width="150" height="150"><br>
+                <h3>heels</h3>
+                <p>₹3,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\shoes.JPG" width="150" height="150"><br>
+                <h3>shoes</h3>
+                <p>₹5,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\bag.JPG" width="150" height="150"><br>
+                <h3>hand bag</h3>
+                <p>₹1,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\sandles.WEBP" width="150" height="150"><br>
+                <h3>Sandals</h3>
+                <p>₹2,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+</br>
+        </tr>
+    </table>
+</br>
+
+<br>
+  
+    <table width="100%" cellpadding="25">
+        <tr align="center">
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\watch.JPG" width="150" height="150"><br>
+                <h3>watch</h3>
+                <p>₹11,500</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\foundations.JPG" width="150" height="150"><br>
+                <h3>foundation</h3>
+                <p>₹20,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\jeans.JPG" width="150" height="150"><br>
+                <h3>Jeans for Girls</h3>
+                <p>₹799</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\sunglass.JPG" width="150" height="150"><br>
+                <h3>Sunglasses</h3>
+                <p>₹1,250</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+</br>
+        </tr>
+    </table>
+</br>
+
+<br>
+  
+    <table width="100%" cellpadding="25">
+        <tr align="center">
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\hairclip.JPG" width="150" height="150"><br>
+                <h3>Hair clips</h3>
+                <p>₹200</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\top.JPG" width="150" height="150"><br>
+                <h3>tops</h3>
+                <p>₹5,000</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\sunscreen.JPG" width="150" height="150"><br>
+                <h3>Sunscreen</h3>
+                <p>₹399</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+            <td bgcolor="pink">
+                <img src="C:\Users\misba\OneDrive\Pictures\collage bag.JPG" width="150" height="150"><br>
+                <h3>College Bags</h3>
+                <p>₹799</p>
+                <input type="button" value="Add to Cart">
+            </td>
+
+</br>
+        </tr>
+    </table>
+</br>
+
+    <br>
+
+    <center>
+        <h2>Special Offers </h2>
+        <p>Get up to 50% OFF on selected products!</p>
+    </center>
+
+    <br>
+
+    <table width="100%" bgcolor="lightblue" cellpadding="15">
+        <tr>
+            <td align="center">
+                <font color="white">
+                    © 2026 Shopping Hub | Contact Us | About Us
+                </font>
+            </td>
+        </tr>
+    </table>
+
+
+</body>
+</html>

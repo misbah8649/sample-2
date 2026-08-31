@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator Table Demo</title>
+<style>
+  table {
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  td {
+    border: 1px solid black;
+    padding: 10px;
+    text-align: center;
+  }
+  input {
+    width: 80px;
+  }
+  button {
+    width: 50px;
+    height: 30px;
+  }
+</style>
+</head>
+<body>
+<h2>Calculator in Table Layout</h2>
+
+<table>
+  <tr>
+    <td>A =</td>
+    <td><input type="text" id="text1" placeholder="enter a value"></td>
+  </tr>
+  <tr>
+    <td>B =</td>
+    <td><input type="text" id="text2" placeholder="enter a value"></td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">-</button>
+      <button onclick="calculate('*')">*</button>
+      <button onclick="calculate('/')">%</button>
+    </td>
+  </tr>
+  <tr>
+    <td>=</td>
+    <td><p id="result"></p></td>
+  </tr>
+</table>
+
+<script>
+function calculate(op) {
+  let a = parseInt(document.getElementById('text1').value);
+  let b = parseInt(document.getElementById('text2').value);
+  let res;
+
+  switch(op) {
+    case '+': res = a + b; break;
+    case '-': res = a - b; break;
+    case '*': res = a * b; break;
+    case '/': res = a / b; break;
+    default: res = 'Invalid';
+  }
+
+  document.getElementById('result').innerHTML = res;
+}
+</script>
+
+</body>
+</html>
