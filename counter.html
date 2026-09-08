@@ -1,0 +1,23 @@
+<html>
+<head>
+<title>Interactive Counter</title>
+<div id="counter">0</div>
+<button onclick="changeCounter(-1)">decrease</button>
+<button onclick="resetCounter()">reset</button>
+<button onclick="changeCounter(+1)">increase</button>
+<script>
+   let count = 0;
+   function changeCounter(value) {
+     count += value;
+     document.getElementById("counter").textContent = count;
+    }
+
+   function resetCounter() {
+     count = 0;
+     document.getElementById("counter").textContent = count;
+   }
+</script>
+<body>
+</body>
+</head>
+</html>

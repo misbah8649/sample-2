@@ -1,0 +1,191 @@
+<html>
+<head>
+<title>Block Layout</title>
+<style>
+
+   .container {
+  display: grid;
+  grid-template-rows: 15vh 35vh 40vh 10vh; 
+  grid-template-columns: 25% 25% 25% 25%; 
+  height: 100vh;
+  border: 2px solid black;
+  }
+
+      
+.sec1 {
+  background-color: darkblue;
+  color: white;
+  grid-row: 1 / 2;
+  grid-column: 1 / 5;
+  text-align: center; 
+ }
+
+.sec1 a {
+  color: white;
+  margin: 15px;
+  }
+
+.sec2 {
+  background-color: lightblue;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  text-align: center;
+  }
+
+.sec3 {
+  background-color: lightyellow;
+  grid-row: 2 / 3;
+  grid-column: 2 / 3;
+  text-align: center;
+  }
+
+.sec4 {
+  background-color: lightpink;
+  grid-row: 2 / 3;
+  grid-column: 3 / 4;
+  text-align: center;
+  }
+
+.sec5 {
+  background-color: green;
+  grid-row: 2 / 4;
+  grid-column: 4 / 5;
+  text-align: center;
+  }
+
+.sec5 img {
+  width: 200px;
+  height: 150px;
+  object-fit: contain;
+  }
+
+.sec6 {
+  background-color: lightgrey;
+  grid-row: 3 / 4;
+  grid-column: 1 / 4; 
+  text-align: center;
+  padding: 10px;
+  }
+
+.sec7 {
+  background-color: maroon;
+  color: white;
+  grid-row: 4 / 5;
+  grid-column: 1 / 5; 
+  text-align: center;
+  }
+
+.sec2 img,
+.sec3 img,
+.sec4 img {
+  width: 100px;
+  height: 100px;
+  }
+
+ button {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  }
+
+ </style>
+ </head>
+
+ <body>
+<div class="container">      
+
+<div class="sec1">
+            
+             <h2>E-COMMERCE WEBSITE LAYOUT</h2>
+ 
+ <h2> 
+    <a href="#">Home</a>
+    <a href="BL login.html">Login</a>
+    <a href="BL register.html">Register</a>
+    <a href="#">Cart</a>
+    <a href="BL about us .html">About Us</a>
+ </h2>
+
+  </div>
+
+
+   <div class="sec2">
+
+        <h3>Watch</h3>
+
+        <img src="C:\Users\misba\OneDrive\Pictures\watch.JPG" width="150" height="150">
+
+        <p>Price: ₹1,500</p>
+
+        <button>Add to Cart</button>
+
+    </div>
+
+  <div class="sec3">
+
+        <h3>Headphones</h3>
+
+        <img src="C:\Users\misba\OneDrive\Pictures\headphone.JPG">
+
+        <p>Price: ₹999</p>
+
+        <button>Add to Cart</button>
+
+    </div>
+
+  <div class="sec4">
+
+        <h3>Handbag</h3>
+
+        <img src="C:\Users\misba\OneDrive\Pictures\bag.JPG">
+
+        <p>Price: ₹1,299</p>
+
+        <button>Add to Cart</button>
+
+    </div>
+
+
+  <div class="sec5">
+
+            <h3>Items Available:</h3>
+
+
+          <ul>
+
+            <li>Smart Watches</li>
+            <li>Headphones</li>
+            <li>Earbuds</li>
+            <li>Mobile Phones</li>
+            <li>Laptops</li>
+            <li>Handbags</li>
+            <li>Shoes</li>
+            <li>Clothes</li>
+            <li>Beauty Products</li>
+
+        </ul>
+</div>
+
+
+ <div class="sec6">
+
+        <h3>SALE POSTER</h3>
+
+        <img src="C:\Users\misba\OneDrive\Pictures\sale offer.JPG" width="200" height="150">
+
+        <h3>Special Offers Available</h3>
+
+        <button>Shop Now</button>
+
+    </div>
+
+
+
+  <div class="sec7">
+
+                  <p>@ 2026 My E-Commerce Website (grid layout)</p>
+
+             </div>
+</div>
+</body>
+</html>
